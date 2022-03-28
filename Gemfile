@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.1"
 
+# gem irb because rails console does not work
+gem 'irb'
+
 # tzinfo-data
 gem 'tzinfo-data', '~> 1.2021', '>= 1.2021.5'
 
