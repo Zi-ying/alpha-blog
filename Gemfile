@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.1"
 
+# gem byebug because it was not installed
+# gem 'byebug', '~> 9.0', '>= 9.0.5' # Does not work
+
 # gem irb because rails console does not work
 gem 'irb'
 
