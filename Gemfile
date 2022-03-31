@@ -79,3 +79,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# this allows to deploy on Heroku.com
+group :production do
+  'pg'
+end
+
