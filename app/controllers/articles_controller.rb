@@ -1,13 +1,13 @@
 class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
-    
+
     def show
     end
-    
+
     def index
         @articles = Article.all
     end
-    
+
     def new
         @article = Article.new
     end
@@ -25,11 +25,11 @@ class ArticlesController < ApplicationController
             redirect_to @article
         else
             render 'new'
-        end    
+        end
     end
-    
+
     def update
-        if @article.update(article_params)        
+        if @article.update(article_params)
             flash[:notice] = "Article was updated successfully."
             redirect_to @article
         else
@@ -42,8 +42,8 @@ class ArticlesController < ApplicationController
         redirect_to articles_path
     end
 
-    private 
-    
+    private
+
     def set_article
         @article = Article.find(params[:id])
     end
